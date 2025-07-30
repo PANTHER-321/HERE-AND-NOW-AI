@@ -24,3 +24,6 @@ with gr.Blocks(theme="default", title=brand_info["organizationName"]) as app:
             ["Tell me about the team behind Here and Now AI."]
         ]
     )    
+
+if __name__ == "__main__":
+    app.launch()
