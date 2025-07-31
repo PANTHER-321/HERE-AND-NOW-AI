@@ -1,14 +1,19 @@
-from langchain_google_genai import chatGoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
-goole_api_key = os.getenv("GOOGLE_API_KEY")
+google_api_key = os.getenv("GEMINI_API_KEY")
 model ="gemini-2.5-flash-lite"
 
 def run_hello_langchain():
-    llm = chatGoogleGenerativeAI(model=model, api_key=goole_api_key)
+    """
+    Instantiates a ChatGoogleGenerativeAI model.
+    Invokes it with a simple prompt.
+    Prints the model's response.
+    """
+    llm = ChatGoogleGenerativeAI(model=model, google_api_key=google_api_key)
     response = llm.invoke("explain RLHF in 2 lines!")
     print(response.content)
 
-run_hello_langchain()    
+run_hello_langchain()
