@@ -1,3 +1,10 @@
+<<<<<<< HEAD
 openai
 python-dotenv
 gradio
+=======
+langchain
+langchain-google-genai
+python-dotenv
+langchain-community
+>>>>>>> 5976c210413000d576c478edf6983a7dd59a002f
